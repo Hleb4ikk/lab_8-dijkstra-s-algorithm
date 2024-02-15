@@ -34,18 +34,13 @@ public class Application {
             }
 
             for(int k = 0; k < len-1; k++){
-                if(vertecies[route[k]][route[k+1]] == 0){
+
+                if(vertecies[route[k]][route[k+1]] == 0 && vertecies[route[k+1]][route[k]] == 0){
 
                     vertecies[route[k]][route[k+1]] = 1;
                     vertecies[route[k+1]][route[k]] = 1;
 
-                } else {
-
-                    vertecies[route[k]][route[k+1]] = vertecies[route[k]][route[k+1]] + 3;
-                    vertecies[route[k+1]][route[k]] = vertecies[route[k+1]][route[k]] + 3;
-
                 }
-
 
             }
 
